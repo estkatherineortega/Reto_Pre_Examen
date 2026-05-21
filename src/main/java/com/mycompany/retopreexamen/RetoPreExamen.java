@@ -1,6 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
 
 import java.util.Scanner;
 
@@ -12,7 +9,27 @@ class Lectura {
   }
 }
 
-class FilaIndia 
+class FilaIndia {
+
+
+    int[] fila = new int[100];
+    int tamaño = 0;
+
+    // Agregar soldados a la fila
+    public void add(int soldado) {
+        fila[tamaño] = soldado;
+        tamaño++;
+    }
+
+    // Buscar posición de un soldado
+    public int posicion(int soldado) {
+        for (int i = 0; i < tamaño; i++) {
+            if (fila[i] == soldado) {
+                return i;
+            }
+        }
+        return -1;
+    }
 
 }
 
